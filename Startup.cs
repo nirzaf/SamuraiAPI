@@ -14,6 +14,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using SamuraiAPI.Model;
 
 namespace SamuraiAPI
 {
@@ -31,6 +33,13 @@ namespace SamuraiAPI
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
+
+            services.AddDbContext<SamuraiDbContext>(o =>
+            {
+                o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), 
+                    c=>
+                        c.EnableRetryOnFailure(TimeSpan.FromMinutes(2).Minutes));
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -52,9 +61,8 @@ namespace SamuraiAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthentication();
-            app.UseAuthorization();
+            // app.UseAuthentication();
+            // app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
