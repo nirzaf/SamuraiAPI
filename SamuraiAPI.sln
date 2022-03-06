@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamuraiAPI", "SamuraiAPI.csproj", "{99AF8087-0BB3-47ED-ADA3-6B05985FCB7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99AF8087-0BB3-47ED-ADA3-6B05985FCB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AF8087-0BB3-47ED-ADA3-6B05985FCB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AF8087-0BB3-47ED-ADA3-6B05985FCB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AF8087-0BB3-47ED-ADA3-6B05985FCB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A97F28C1-759D-4165-8BEB-6D426F25B53F}
+	EndGlobalSection
+EndGlobal
